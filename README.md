@@ -1,5 +1,7 @@
-I've had this idea for a website that could help, perhaps just a little, to control the spread of Cov-19.
+I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Cov-19.
 I'm calling it Handshake for now.
+
+For an overview of the Handshake _idea_ see: https://coda-coda.gitlab.io/handshake/
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
@@ -14,11 +16,13 @@ This repository is the location of a bare-bones version of Handshake, described 
 
 
 # Further thoughts:
+ - As an overview of design choices: this basic implementation uses a hash of a user's email and a passphrase to aid privacy, a centralised data store (Google Sheets), decentralised 'logins', is a webpage and uses only free tools.
  - This website/set up was simple to create, it wouldn't be too hard to create an improved version or for anyone with some resources to do so.
  - It does not rely upon users installing any apps, making it easily accessible.
  - It does not rely upon users sharing their location history.
  - It replaces the somewhat dangerous practice (in these times) of physically shaking hands.
  - Privacy is still an issue that would need to be tackled. Using a unique privacy passphrase and then hashing people's email addresses with it is possibly a bit helpful, but it does nothing to protect you from people you Handshake with that might want to reveal your identity. Plus, I'm not a cryptography or privacy expert so can give no guarantees around the privacy of this system whatsoever.
+ - A privacy passphrase is added to the users email before hashing so that a person with a lot of email addresses can't just hash all the email addresses in their directory to match with publicly available data.
  - This idea would still work if the information volunteered was stored privately rather than made publicly available. The onus would then be on the organisation that controlled the data to properly analyse it and make that analysis available to the people who it would be helpful for.
  - People do not need to log in to Handshake every time to generate a QR code, they can generate it once at the [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) then keep their static unique QR code for future use.
  - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
