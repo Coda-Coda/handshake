@@ -1,12 +1,12 @@
 I've had this idea for a website that could help, perhaps just a little, to control the spread of Cov-19.
 I'm calling it Handshake for now.
 
-This repository is the location of a barebones version of Handshake, described below.
+This repository is the location of a bare-bones version of Handshake, described below.
 
 # Brief overview:
  - When 2 people meet, one person goes to [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) and generates a Handshake QR code by entering their email address and optionally a privacy passphrase.
  - The other person scans this QR code which takes them to [Handshake Reader](https://coda-coda.gitlab.io/handshake/Reader) they also enter their email address and privacy passphrase.
- - They then click the link which takes them to a pre-filled Google Form which they simply submit (no need to log in).
+ - They then are redirected (or can click the link) which takes them to a pre-filled Google Form which they simply submit (no need to log in).
  - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their privacy passphrase)
  - People can report their status, e.g. healthy, suspected, or confirmed to Handshake by filling out [this form](https://forms.gle/DWQRNfaeBrwB3oD58), the responses are available publicly [here](https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing)
  
