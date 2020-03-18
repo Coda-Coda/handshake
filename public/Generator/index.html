@@ -30,6 +30,7 @@
       document.getElementById('hashed').innerText = hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       updateQRCode(urlGenerated);
+      document.getElementById('qrcode').style.visibility = 'visible';
       ">
         Email address: </br>
         <input type="text" name="email" id="email" rows="8" cols="50">
@@ -43,7 +44,7 @@
 
 
     <!-- This is where our QRCode will appear in. -->
-    <div id="qrcode"></div>
+    <div id="qrcode" style="visibility: hidden;"></div>
     
 
     <em>Your unique ID is:</em>
