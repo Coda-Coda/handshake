@@ -25,7 +25,7 @@
   <em>
     Type your email address and privacy passphrase here. </br>
     It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
-    Then it will generate a URL, which you will be redirected to a few seconds after you click submit.
+    Then it will generate a URL to a pre-filled Google Form, which you will be redirected to when you click submit.
   </em>
 
 
@@ -36,10 +36,7 @@
       document.getElementById('hashed').innerText = hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       document.getElementById('redirectNotice').innerText = 'Redirecting to Google Forms shortly...';
-      setTimeout(function(){
-            window.location.href = urlGenerated;
-         }, 3000);
-      
+      window.location.href = urlGenerated;
       ">
 
     Email address: </br>
