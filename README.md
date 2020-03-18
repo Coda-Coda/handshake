@@ -28,4 +28,4 @@ This repository is the location of a bare-bones version of Handshake, described 
  - Taking research into how Cov-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
-Lastly: Feel free to take this idea and make it better :)
+Lastly: Feel free to take this idea and make it better - whether by forking this repository and making changes or by taking the idea and building on it :)
