@@ -5,35 +5,62 @@
         them = window.location.search.replace("?them=", "");
     </script>
 
+   <!-- <script>
+     const form = document.querySelector('form')
+        form.addEventListener('submit', event => {
+          // submit event detected
+          event.preventDefault();
+          return false;
+          })
+
+   </script> -->
+
     <title>Handshake v0.1 Reader</title>
 
 <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
 <script type="application/javascript"></script>
     
+<style type="text/css" media="screen">
+  body { text-align:center; }
+</style>
+
 </head>
 
 <body>
-    <h1>
-        Type your email address here. </br>
-        (or select it from autofill).
-      </h1>
+    <em>
+        Type your email address and privacy passphrase here. </br>
+        It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
+        Then it will generate a URL, which you will be redirected to a few seconds after you click submit.
+      </em>
       
-        It will be converted to a long unique id.
-        And added to the id of the person whose QR code you scanned.
-        Then it will generate a URL to click below.
       
-      <form name="IDform" id="IDform">
-        <textarea name="textField" rows="8" cols="50" onkeyup='
-        hashGenerated = new Hashes.SHA256().hex(this.value);
-        document.getElementById("hashed").innerText = hashGenerated;
-        urlGenerated = "https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=" + hashGenerated + "&entry.234110086=" + them;
-        document.getElementById("urlGenerated").innerHTML = "<a href=" + urlGenerated + ">" + urlGenerated + "</a>"' onclick="this.focus();this.select();">Your email address here</textarea>
+      
+      <form name="IDform" id="IDform" onsubmit="event.preventDefault();
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
+      urlGenerated = 'https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=' + hashGenerated + '&entry.234110086=' + them;
+      document.getElementById('hashed').innerText = hashGenerated;
+      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
+      document.getElementById('redirectNotice').innerText = 'Redirecting to Google Forms shortly...';
+      setTimeout(function(){
+            window.location.href = urlGenerated;
+         }, 3000);
+      
+      ">
+
+        Email address: </br>
+        <input type="text" name="email" id="email" rows="8" cols="50">
+        </br>
+        Privacy Passphrase:</br>
+        <em>(you should never change this)</em> </br>
+        <input type="password" id="privacyPassphrase" name="pwd"> 
+        </br>
+        <input type="submit" value="Submit">
       </form>
-      
+      <div id="redirectNotice"></div>
   
-      <div>Your unique ID is:</div>
+      <em>Your unique ID is:</em>
       <div id="hashed"></div>
   
-      <div>Your generated URL is: (click it once you're done)</div>
+      <em>Your generated URL is: (click it once you're done)</em>
       <div id="urlGenerated"></div>
 </body>

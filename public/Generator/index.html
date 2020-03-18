@@ -20,27 +20,36 @@
     </style>
   </head>
   <body>
-    <h1>
-      Type your email address here, </br>
-      it will be converted to a long unique id.
-    </h1>
-    <form name="QRform" id="QRform">
-      <textarea name="textField" rows="8" cols="50" onkeyup='
-      hashGenerated = new Hashes.SHA256().hex(this.value);
-      document.getElementById("hashed").innerText = hashGenerated;
-      urlGenerated = "https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=" + hashGenerated;
-      updateQRCode(urlGenerated)
-      document.getElementById("urlGenerated").innerHTML = "<a href=" + urlGenerated + ">" + urlGenerated + "</a>"' onclick="this.focus();this.select();">Your email address here</textarea>
-    </form>
-    
+    <em>
+      Type your email address here and privacy passphrase here. They will be converted to a long unique id.
+    </em>
+
+    <form name="QRform" id="QRform" onsubmit="event.preventDefault();
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
+      urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=' + hashGenerated;
+      document.getElementById('hashed').innerText = hashGenerated;
+      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
+      updateQRCode(urlGenerated);
+      ">
+        Email address: </br>
+        <input type="text" name="email" id="email" rows="8" cols="50">
+        </br>
+        Privacy Passphrase </br>
+        (you should never change this): </br>
+        <input type="password" id="privacyPassphrase" name="pwd"> 
+        </br>
+        <input type="submit" value="Submit">
+      </form>
+
+
     <!-- This is where our QRCode will appear in. -->
     <div id="qrcode"></div>
     
 
-    <div>Your unique ID is:</div>
+    <em>Your unique ID is:</em>
     <div id="hashed"></div>
 
-    <div>Your generated URL is: (which the QR code links to)</div>
+    <em>Your generated URL is: (which the QR code links to)</em>
     <div id="urlGenerated"></div>
     
 
