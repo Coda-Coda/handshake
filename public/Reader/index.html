@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 
 <head>
-    <script>
-        them = window.location.search.replace("?them=", "");
-    </script>
+  <script>
+    them = window.location.search.replace("?them=", "");
+  </script>
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Handshake Reader</title>
+  <title>Handshake Reader</title>
 
-<script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
-<script type="application/javascript"></script>
-    
-<style type="text/css" media="screen">
-  body { text-align:center; }
-</style>
+  <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
+  <script type="application/javascript"></script>
+
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+  </style>
 
 </head>
 
 <body>
-    <em>
-        Type your email address and privacy passphrase here. </br>
-        It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
-        Then it will generate a URL, which you will be redirected to a few seconds after you click submit.
-      </em>
-      
-      
-      
-      <form name="IDform" id="IDform" onsubmit="event.preventDefault();
+  <em>
+    Type your email address and privacy passphrase here. </br>
+    It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
+    Then it will generate a URL, which you will be redirected to a few seconds after you click submit.
+  </em>
+
+
+
+  <form name="IDform" id="IDform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
       urlGenerated = 'https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=' + hashGenerated + '&entry.234110086=' + them;
       document.getElementById('hashed').innerText = hashGenerated;
@@ -40,20 +42,20 @@
       
       ">
 
-        Email address: </br>
-        <input type="text" name="email" id="email" rows="8" cols="50">
-        </br>
-        Privacy Passphrase:</br>
-        <em>(you should never change this)</em> </br>
-        <input type="password" id="privacyPassphrase" name="pwd"> 
-        </br>
-        <input type="submit" value="Submit">
-      </form>
-      <div id="redirectNotice"></div>
-  
-      <em>Your unique ID is:</em>
-      <div id="hashed"></div>
-  
-      <em>Your generated URL is: (click it once you're done)</em>
-      <div id="urlGenerated"></div>
+    Email address: </br>
+    <input type="text" name="email" id="email" rows="8" cols="50">
+    </br>
+    Privacy Passphrase:</br>
+    <div style="font-size: small;"><em>(you make this up, then you should never change this)</em> </div></br>
+    <input type="password" id="privacyPassphrase" name="pwd">
+    </br>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="redirectNotice"></div>
+
+  <em>Your unique ID is:</em>
+  <div id="hashed"></div>
+
+  <em>Your generated URL is: (click it once you're done)</em>
+  <div id="urlGenerated"></div>
 </body>
