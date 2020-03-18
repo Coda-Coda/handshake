@@ -27,6 +27,7 @@ This repository is the location of a bare-bones version of Handshake, described 
  - People do not need to log in to Handshake every time to generate a QR code, they can generate it once at the [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) then keep their static unique QR code for future use.
  - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
  - This does rely on trusting that people don't mess with Handshake by adding fake entries, but I am hopeful that this would not happen. Fully featured versions of Handshake could mitigate this in various ways I'm sure.
+ - The Handshake idea was partly inspired by [Co-Epi](https://www.coepi.org/).
 
  # Future work ideas: (just ideas, I am not in a position to work on them)
  - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1)/2 codes.
