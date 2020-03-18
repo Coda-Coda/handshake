@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="qrcode.js">
+</script>
+    <script type="text/javascript" src="html5-qrcode.js">
+</script>
+
+<script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
+<script type="application/javascript"></script>
+
+
+
+    <title>
+      Handshake V0.1 Generator
+    </title>
+    <style type="text/css" media="screen">
+      body { text-align:center; }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Type your email address here, </br>
+      it will be converted to a long unique id.
+    </h1>
+    <form name="QRform" id="QRform">
+      <textarea name="textField" rows="8" cols="50" onkeyup='
+      hashGenerated = new Hashes.SHA256().hex(this.value);
+      document.getElementById("hashed").innerText = hashGenerated;
+      urlGenerated = "https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=" + hashGenerated;
+      updateQRCode(urlGenerated)
+      document.getElementById("urlGenerated").innerHTML = "<a href=" + urlGenerated + ">" + urlGenerated + "</a>"' onclick="this.focus();this.select();">Your email address here</textarea>
+    </form>
+    
+    <!-- This is where our QRCode will appear in. -->
+    <div id="qrcode"></div>
+    
+
+    <div>Your unique ID is:</div>
+    <div id="hashed"></div>
+
+    <div>Your generated URL is: (which the QR code links to)</div>
+    <div id="urlGenerated"></div>
+    
+
+    <script type="text/javascript">
+      function updateQRCode(text) {
+
+        var element = document.getElementById("qrcode");
+
+        var bodyElement = document.body;
+        if(element.lastChild)
+          element.replaceChild(showQRCode(text), element.lastChild);
+        else
+          element.appendChild(showQRCode(text));
+
+      }
+
+      updateQRCode('ERROR');
+    </script>
+  </body>
+</html>
