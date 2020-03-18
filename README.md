@@ -19,10 +19,13 @@ This repository is the location of a bare-bones version of Handshake, described 
  - It replaces the somewhat dangerous practice (in these times) of physically shaking hands.
  - Privacy is still an issue that would need to be tackled. Using a unique privacy passphrase and then hashing people's email addresses with it is possibly a bit helpful, but it does nothing to protect you from people you Handshake with that might want to reveal your identity. Plus, I'm not a cryptography or privacy expert so can give no guarantees around the privacy of this system whatsoever.
  - People do not need to log in to Handshake every time to generate a QR code, they can generate it once at the [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) then keep their static unique QR code for future use.
- - The use of Google forms and sheets as opposed to a database, while unorthodox, also allows for many people to easily understand it potentially and makes it easy to share data in an append only manner.
- 
+ - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
+ - This does rely on trusting that people don't mess with Handshake by adding fake entries, but I am hopeful that this would not happen. Fully featured versions of Handshake could mitigate this in various ways I'm sure.
+
  # Future work ideas:
  - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1) codes.
  - Possibly also you could have QR codes for locations such as at each coffee table or train seat, this could even work with the current set up by treating locations as people but would require additional thought.
  - Taking research into how Cov-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
+
+Lastly: Feel free to take this idea and make it better :)
