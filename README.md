@@ -22,10 +22,11 @@ This repository is the location of a bare-bones version of Handshake, described 
  - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
  - This does rely on trusting that people don't mess with Handshake by adding fake entries, but I am hopeful that this would not happen. Fully featured versions of Handshake could mitigate this in various ways I'm sure.
 
- # Future work ideas:
+ # Future work ideas: (just ideas, I am not in a position to work on them)
  - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1) codes.
  - Possibly also you could have QR codes for locations such as at each coffee table or train seat, this could even work with the current set up by treating locations as people but would require additional thought.
  - Taking research into how Cov-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
-Lastly: Feel free to take this idea and make it better :)
+# Please take this idea and make it better - I am not in a position to do so
+Lastly: please feel free to take this idea and make it better :)
