@@ -23,28 +23,24 @@
 
 <body>
   <em>
-    Type your email address and privacy passphrase here. </br>
-    It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
+    Type your unique passphrase here. </br>
+    It will be converted to a long unique ID and added to the ID of the person whose QR code you scanned.
     Then it will generate a URL to a pre-filled Google Form, which you will be redirected to when you click submit.
   </em>
 
 
 
   <form name="IDform" id="IDform" onsubmit="event.preventDefault();
-      hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
       urlGenerated = 'https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=' + hashGenerated + '&entry.234110086=' + them;
       document.getElementById('hashed').innerText = hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       document.getElementById('redirectNotice').innerText = 'Redirecting to Google Forms shortly...';
       window.location.href = urlGenerated;
       ">
-
-    Email address: </br>
-    <input type="text" name="email" id="email" rows="8" cols="50">
-    </br>
-    Privacy Passphrase:</br>
-    <div style="font-size: small;"><em>(you make this up, then you should never change this)</em> </div></br>
-    <input type="password" id="privacyPassphrase" name="pwd">
+    Unique Passphrase: </br>
+    <div style="font-size: small;"><em>(you make this up, then you should never change this. Please make sure it is something no-one else would choose so that you don't end up with the same ID as someone else.)</em> </div></br>
+    <input type="password" id="uniquePassphrase" name="pwd">
     </br>
     <input type="submit" value="Submit">
   </form>
