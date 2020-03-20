@@ -1,4 +1,4 @@
-I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Cov-19.
+I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Covid-19.
 I'm calling it Handshake for now.
 
 For an overview of the Handshake _idea_ see: https://coda-coda.gitlab.io/handshake/
@@ -12,7 +12,7 @@ This repository is the location of a bare-bones version of Handshake, described 
  - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their privacy passphrase)
  - People can report their status, e.g. healthy, suspected, or confirmed to Handshake by filling out [this form](https://forms.gle/DWQRNfaeBrwB3oD58), the responses are available publicly [here](https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing)
  
- - Handshake data can then used by anybody for purposes related to stopping the spread of Cov-19. For example, when someone is reported as having confirmed Cov-19, the data from Handshakes can be used to warn those who might have been exposed while the person was contagious to be careful (due to the current setup this would require people to regularly check a Handshake page that has not yet been created to check their risk).
+ - Handshake data can then used by anybody for purposes related to stopping the spread of Covid-19. For example, when someone is reported as having confirmed Covid-19, the data from Handshakes can be used to warn those who might have been exposed while the person was contagious to be careful (due to the current setup this would require people to regularly check a Handshake page that has not yet been created to check their risk).
 
 
 # Further thoughts:
@@ -32,7 +32,7 @@ This repository is the location of a bare-bones version of Handshake, described 
  # Future work ideas: (just ideas, I am not in a position to work on them)
  - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1)/2 codes.
  - Possibly also you could have QR codes for locations such as at each coffee table or train seat, this could even work with the current set up by treating locations as people but would require additional thought.
- - Taking research into how Cov-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
+ - Taking research into how Covid-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
 # Please take this idea and make it better - I am not in a position to do so
