@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body onload='document.getElementById("handshake2CustomLink").innerHTML = "<a href=\"https\:\/\/coda-coda.gitlab.io/handshake/handshake2/Reader/index.html?them=" + them + "\">Use this version instead</a\>";'>
   <em>
     Type your email address and privacy passphrase here. </br>
     It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
@@ -40,6 +40,7 @@
       ">
 
     Email address: </br>
+    <div style="font-size: small;"><em>Prefer not to enter your email? <div id="handshake2CustomLink"></div></em> </div></br>
     <input type="text" name="email" id="email" rows="8" cols="50">
     </br>
     Privacy Passphrase:</br>
