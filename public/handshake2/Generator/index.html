@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="qrcode.js">
+  </script>
+  <script type="text/javascript" src="html5-qrcode.js">
+  </script>
+
+  <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
+  <script type="application/javascript"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Handshake Generator
+  </title>
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <em>
+    Type your email address here and privacy passphrase here. They will be converted to a long unique id.
+  </em>
+
+  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
+      urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=' + hashGenerated;
+      document.getElementById('hashed').innerText = hashGenerated;
+      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
+      updateQRCode(urlGenerated);
+      document.getElementById('qrcode').style.visibility = 'visible';
+      ">
+    Email address: </br>
+    <input type="text" name="email" id="email" rows="8" cols="50">
+    </br>
+    Privacy Passphrase: </br>
+    <div style="font-size: small;"><em>(you make this up, then you should never change this)</em> </div></br>
+    <input type="password" id="privacyPassphrase" name="pwd">
+    </br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+  <!-- This is where our QRCode will appear in. -->
+  <div id="qrcode" style="visibility: hidden; width: 100%;"></div>
+
+
+  <em>Your unique ID is:</em>
+  <div id="hashed"></div>
+
+  <em>Your generated URL is: (which the QR code links to)</em>
+  <div id="urlGenerated"></div>
+
+  </br></br>
+  <em>How does this work?</em> See: <a href="https://gitlab.com/Coda-Coda/handshake">https://gitlab.com/Coda-Coda/handshake</a>
+
+  <script type="text/javascript">
+    function updateQRCode(text) {
+
+      var element = document.getElementById("qrcode");
+
+      var bodyElement = document.body;
+      if (element.lastChild)
+        element.replaceChild(showQRCode(text), element.lastChild);
+      else
+        element.appendChild(showQRCode(text));
+
+    }
+
+    updateQRCode('ERROR');
+  </script>
+</body>
+
+</html>
