@@ -31,7 +31,7 @@
 
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
-      urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=' + hashGenerated;
+      urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=Person_' + hashGenerated;
       document.getElementById('hashed').innerText = hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       updateQRCode(urlGenerated);
