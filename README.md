@@ -7,6 +7,7 @@ This repository is the location of a bare-bones version of Handshake, described 
 
 # Brief overview:
  - When 2 people meet, one person goes to [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) and generates a Handshake QR code by entering their email address and optionally a privacy passphrase (or alternatively just a unique phrase).
+ - Alternatively, [locations can generate their own QR code](https://coda-coda.gitlab.io/hanshake/locations/Generator/) which can be displayed and scanned by people visiting.
  - The other person scans this QR code which takes them to [Handshake Reader](https://coda-coda.gitlab.io/handshake/Reader) they also enter their email address and privacy passphrase (or just a unique phrase).
  - They then are redirected (or can click the link) which takes them to a pre-filled Google Form which they simply submit (no need to log in).
  - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their privacy passphrase - or just the hash of their unique phrase)
@@ -29,11 +30,11 @@ This repository is the location of a bare-bones version of Handshake, described 
  - People do not need to log in to Handshake every time to generate a QR code, they can generate it once at the [Handshake Generator](https://coda-coda.gitlab.io/handshake/Generator/) then keep their static unique QR code for future use.
  - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
  - This does rely on trusting that people don't mess with Handshake by adding fake entries, but I am hopeful that this would not happen. Fully featured versions of Handshake could mitigate this in various ways I'm sure.
+- You can have QR codes for locations such as at each coffee table or train seat - generate them [here](https://coda-coda.gitlab.io/hanshake/locations/Generator/). QR codes should be displayed at locations and _scanned by people that visit_ them (rather than having the location owner scan the QR code of the customer, for example).
  - The Handshake idea was partly inspired by [Co-Epi](https://www.coepi.org/).
 
  # Future work ideas: (just ideas, I am not in a position to work on them)
  - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1)/2 codes.
- - Possibly also you could have QR codes for locations such as at each coffee table or train seat, this could even work with the current set up by treating locations as people but would require additional thought.
  - Taking research into how Covid-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
