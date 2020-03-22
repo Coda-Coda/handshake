@@ -3,7 +3,15 @@ I'm calling it Handshake for now.
 
 For an overview of the Handshake _idea_ see: https://coda-coda.gitlab.io/handshake/
 
-There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](Generate_Visualisation.md).
+There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
+
+Here is what it looked like at 5:40pm on 22nd March 2020:
+
+![Image of Handshake Connections as at 5:40pm 22nd March 2020](public/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
+
+In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
+
+Right now, when viewing the visualisation you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
