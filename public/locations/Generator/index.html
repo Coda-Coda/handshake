@@ -32,7 +32,7 @@
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
       urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/Reader/index.html?them=Location_' + hashGenerated;
-      document.getElementById('hashed').innerText = hashGenerated;
+      document.getElementById('hashed').innerText = 'Location_' + hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       updateQRCode(urlGenerated);
       document.getElementById('qrcode').style.visibility = 'visible';
