@@ -11,7 +11,7 @@ Here is what it looked like at 5:40pm on 22nd March 2020:
 
 In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
 
-Right now, when viewing the visualisation you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
+When [viewing the visualisation](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185) you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
