@@ -18,7 +18,7 @@ Here is a mock-up of what it could look like:
 ![Image of mock-up of Handshake](public/Handshake_mockup.png)
 
 Feel free to implement some or all of the changes in this mock-up and make a pull request.
-The Word document that generated the mock-up is also available [here](public/Handshake_mockup.docx).
+The Word document that generated the mock-up is also available [here](public/Handshake_mockup.docx). This mock-up was contributed by an anonymous contributor.
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
