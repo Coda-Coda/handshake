@@ -12,3 +12,5 @@
 You've generated a graph with the latest data from what has been reported on the Handshake forms.
 
 Feel free to [make a copy of the Google Sheet that helps implement this](https://docs.google.com/spreadsheets/d/10y7cufEh8_1pYc0X4VwJ-5uBc5ztbrQABjTVg9BF_ag/copy).
+
+It currently includes only the first 8 characters of the unique id, for readability. This could be changed by altering the value in the Variables sheet after [making a copy](https://docs.google.com/spreadsheets/d/10y7cufEh8_1pYc0X4VwJ-5uBc5ztbrQABjTVg9BF_ag/copy).

@@ -3,7 +3,7 @@ I'm calling it Handshake for now.
 
 For an overview of the Handshake _idea_ see: https://coda-coda.gitlab.io/handshake/
 
-There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate it yourself see [these instructions](Generate_Visualisation.md).
+There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](Generate_Visualisation.md).
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
