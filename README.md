@@ -55,5 +55,7 @@ This repository is the location of a bare-bones version of Handshake, described 
  - Taking research into how Covid-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
+Feedback can be publicly submitted via Gitlab issues here: https://gitlab.com/Coda-Coda/handshake/-/issues/new (you will need to sign in to Gitlab - you can use a Google account to sign in to Gitlab)
+
 # Please take this idea and make it better - I am not in a position to do so
 Lastly: please feel free to take this idea and make it better :)
