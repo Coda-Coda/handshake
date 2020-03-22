@@ -13,6 +13,13 @@ In this image, green denotes a person reporting as healthy (and never as sick or
 
 When [viewing the visualisation](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185) you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
 
+Here is a mock-up of what it could look like:
+
+![Image of mock-up of Handshake](public/Handshake_mockup.png)
+
+Feel free to implement some or all of the changes in this mock-up and make a pull request.
+The Word document that generated the mock-up is also available [here](Handshake_mockup.docx).
+
 This repository is the location of a bare-bones version of Handshake, described below.
 
 # Brief overview:
