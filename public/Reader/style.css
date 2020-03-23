@@ -1,0 +1,48 @@
+:root {
+    --main-bg-color: #323E4F;
+    --main-text-color: #FFFFFF;
+    --secondary-text-color: #ED7D31;
+  }
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
+}
+
+.heading_hand {
+    color: var(--secondary-text-color);
+}
+
+.heading_shake {
+    color: var(--main-text-color);
+}
+
+.subheading {
+    color: var(--secondary-text-color);
+}
+
+.normal_text,
+.normal_text a {
+    color: var(--main-text-color);
+}
+
+a.normal_text:hover {
+    color: var(--secondary-text-color);
+}
+
+.submit_button {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-bg-color);
+    border: none;
+    color: var(--secondary-text-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
