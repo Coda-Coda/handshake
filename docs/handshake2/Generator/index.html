@@ -31,7 +31,7 @@
 
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
-      urlGenerated = 'https\:\/\/coda-coda.gitlab.io/handshake/handshake2/Reader/index.html?them=Person_' + hashGenerated;
+      urlGenerated = 'https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=Person_' + hashGenerated;
       document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
       updateQRCode(urlGenerated);
@@ -57,10 +57,10 @@
   <div id="urlGenerated"></div>
 
   </br></br>
-  <em>How does this work?</em> See: <a href="https://gitlab.com/Coda-Coda/handshake">https://gitlab.com/Coda-Coda/handshake</a>
+  <em>How does this work?</em> See: <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a>
   </br>
   </br>
-  Please note that the current version of handshake <b>does not alert you</b> if a link between you and a case of Covid-19 is found - for now you would need to manually examine the publicly available data (see the links on <a href="https://gitlab.com/Coda-Coda/handshake">https://gitlab.com/Coda-Coda/handshake</a> - in particular the visualisation) looking for links between your hash/unique ID (see just above) and the hashes/unique IDs of others who have reported they are affected by Covid-19 on Handshake.
+  Please note that the current version of handshake <b>does not alert you</b> if a link between you and a case of Covid-19 is found - for now you would need to manually examine the publicly available data (see the links on <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a> - in particular the visualisation) looking for links between your hash/unique ID (see just above) and the hashes/unique IDs of others who have reported they are affected by Covid-19 on Handshake.
 
   <script type="text/javascript">
     function updateQRCode(text) {
