@@ -80,15 +80,14 @@ function copyURL() {
   <br>
 
   <span class="normal_text">
-    Type a phrase that uniquely identifies your location.
+    Type a unique phrase that no-one else would choose
   </span>
   <br>
   <br>
-  <span class="small_text">Please make sure it is something no-one else would choose
+  <span class="small_text">Please make <em>sure</em> it is something no-one else would choose
     <br>
     <br>
-    Unique to your location or
-    with a lot of randomness
+    Such as a few random words that you can remember
     <br>
     <br>
     This ensures that your location doesn't end up with the same anonymous ID as somewhere else
@@ -101,7 +100,7 @@ function copyURL() {
       href="https://preshing.com/20110811/xkcd-password-generator/">https://preshing.com/20110811/xkcd-password-generator/</a>
     to generate four unique words.
   </span>
-
+  
 
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
