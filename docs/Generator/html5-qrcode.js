@@ -16,7 +16,7 @@ function showQRCode(text) {
 
   
   var dotsize = 3;  // size of box drawn on canvas
-  var padding = 10; // (white area around your QRCode)
+  var padding = 25; // (white area around your QRCode)
   var black = "rgb(0,0,0)";
   var white = "rgb(255,255,255)";
   var QRCodeVersion = 15; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html

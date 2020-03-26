@@ -49,6 +49,16 @@ a.small_text:hover {
     color: var(--secondary-text-color);
 }
 
+.tiny_text,
+.tiny_text a {
+    font-size: x-small;
+    color: var(--main-text-color);
+}
+
+a.tiny_text:hover {
+    color: var(--secondary-text-color);
+}
+
 .submit_button {
     font-family: 'Lato', sans-serif;
     background-color: var(--main-bg-color);
@@ -59,6 +69,21 @@ a.small_text:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    white-space: normal;
+}
+
+.copy_button {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-bg-color);
+    border: none;
+    color: var(--main-text-color);
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-small;
+    white-space: normal;
+    font-style: italic;
 }
 
 table.center {
