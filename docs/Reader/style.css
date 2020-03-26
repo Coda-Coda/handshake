@@ -30,6 +30,25 @@ a.normal_text:hover {
     color: var(--secondary-text-color);
 }
 
+.secondary_text,
+.secondary_text a {
+    color: var(--secondary-text-color);
+}
+
+a.secondary_text:hover {
+    color: var(--main-text-color);
+}
+
+.small_text,
+.small_text a {
+    font-size: small;
+    color: var(--main-text-color);
+}
+
+a.small_text:hover {
+    color: var(--secondary-text-color);
+}
+
 .submit_button {
     font-family: 'Lato', sans-serif;
     background-color: var(--main-bg-color);
