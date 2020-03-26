@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body onload='document.getElementById("handshake2CustomLink").innerHTML = "<a class=\"tiny_text\" href=\"https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=" + them + "\">Click here to shake hands without submitting your email address</a\>";'>
   <br>
   <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
 
@@ -53,6 +53,8 @@
         <td><input type="password" id="privacyPassphrase" name="pwd"></td>
       </tr>
     </table>
+    
+    <div class="tiny_text" id="handshake2CustomLink"></div>
     <br>
     <input class="submit_button" type="submit" value="Click here to shake hands">
   </form>
