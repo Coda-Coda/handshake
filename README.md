@@ -3,7 +3,7 @@ I'm calling it Handshake for now.
 
 For an overview of the Handshake _idea_ see: https://coda-coda.github.io/handshake/
 
-There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
+There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](docs/Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
 
 Here is what it looked like at 5:40pm on 22nd March 2020:
 
