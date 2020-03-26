@@ -18,47 +18,131 @@
       text-align: center;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
-  <em>
-    Type your unique passphrase here. <br>
-    It will be converted to a long unique ID and added to the ID of the person whose QR code you scanned.
-    Then it will generate a URL to a pre-filled Google Form, which you will be redirected to when you click submit.
-  </em>
+
+  <br>
+  <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
+
+  <span class="subheading">Track your proximity to COVID-19</span>
+  <br>
+  <br>
+  <span class="normal_text">Create your anonymous id:</span>
+  <br>
+  <br>
+
+
+  
 
 
 
-  <form name="IDform" id="IDform" onsubmit="event.preventDefault();
+  
+  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
       urlGenerated = 'https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=Person_' + hashGenerated + '&entry.234110086=' + them;
       document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
-      document.getElementById('redirectNotice').innerText = 'Redirecting to Google Forms shortly...';
-      window.location.href = urlGenerated;
+      updateQRCode(urlGenerated);
+      document.getElementById('generatedContent').style.visibility = 'visible';
       ">
-    <input style="visibility: hidden; height: 0px; width: 0px" type="text" name="placeHolderSoThatBrowsersSavePassphrase" id="placeholder" rows="1" cols="1">
-    Unique Passphrase: <br>
-    <div style="font-size: small;"><em>(you make this up, then you should never change this. Please make sure it is something no-one else would choose so that you don't end up with the same ID as someone else.)</em> </div><br>
-    <input type="password" id="uniquePassphrase" name="pwd">
+    <input style="visibility: hidden; height: 0px; width: 0px" type="text"
+      name="placeHolderSoThatBrowsersSavePassphrase" id="placeholder" rows="1" cols="1">
+
+    <span class="small_text">Please make sure it is something no-one else would choose so that you don't end up with the
+      same ID as someone else.
+      <br> Consider using <a class="small_text"
+        href="https://preshing.com/20110811/xkcd-password-generator/">https://preshing.com/20110811/xkcd-password-generator/</a>
+    </span><br>
+
     <br>
-    <input type="submit" value="Submit">
-  </form>
-  <div id="redirectNotice"></div>
 
-  <em>Your unique ID is:</em>
-  <div id="hashed"></div>
+    <table class="center">
 
-  <em>Your generated URL is:</em>
-  <br>
-  <div style="font-size: small;"><em>(click it once you're done if the redirect does not work)</em></div>
-  <div id="urlGenerated"></div>
+      <tr>
+        <td><span class="normal_text">Unique Phrase:</span> </td>
+        <td><input type="password" id="uniquePassphrase" name="pwd"></td>
+      </tr>
+    </table>
 
-  <br><br>
-  <em>How does this work?</em> See: <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a>
+    <br>
+    <input class="submit_button" type="submit" value="Click here to shake hands">
+  </form>  <div id="redirectNotice"></div>
+
+
   <br>
   <br>
-  Please note that the current version of handshake <b>does not alert you</b> if a link between you and a case of Covid-19 is found - for now you would need to manually examine the publicly available data (see the links on <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a> - in particular the visualisation) looking for links between your hash/unique ID (see just above) and the hashes/unique IDs of others who have reported they are affected by Covid-19 on Handshake.
+
+
+
+  <span class="normal_text">How this works:
+    <br>
+    <span class="small_text">
+
+      <br>
+      Your phrase is '<a class="small_text"
+        href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">hashed</a>' to form a unique id.
+      <br>
+      <br>
+      This is done in your browser, your phrase in plain text never leaves your phone or computer.
+      <br>
+      <br>
+      Assuming you used a strong unique phrase, it is virtually impossible to go from the hash alone back to your
+      phrase.
+      <br>
+      <br>
+      However, people still may be able to <a class="small_text"
+        href="https://en.wikipedia.org/wiki/Data_re-identification">reidentify you</a>, especially those who know
+      your whereabouts or people you handshake with.
+      <br>
+      <br>
+      This is Open Source and so you can <a class="small_text" href="https://github.com/Coda-Coda/handshake/">check
+        the source code</a> or "View Source" in your browser as it is only HTML and Javascript.
+      <br>
+      <br>
+      No guarantee of privacy, accuracy of information or any guarantee whatsoever is provided.
+      </li>
+      </ul>
+    </span>
+
+    <br>
+    <br>
+
+    <span class="normal_text">See the public record (raw data):
+
+      <br>
+      <span class="small_text">
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing">Handshakes
+          Google Spreadsheet</a>
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing">Status
+          Reports Google Spreadsheet</a>
+        <br>
+
+      </span>
+
+      <br>
+
+      <span class="normal_text">If you want to get involved:</span>
+      <span class="small_text">
+        <br>
+        <br>
+        <a class="small_text" href="https://github.com/Coda-Coda/handshake/">Get involved on GitHub</a>
+        <br>
+
+        <a class="small_text" href="mailto:get.involved.handshake@gmail.com">Send an email to
+          get.involved.handshake@gmail.com</a>
+        <br>
+      </span>
+
+    </span>
+
 
 </body>
