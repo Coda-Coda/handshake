@@ -83,7 +83,7 @@ function copyURL() {
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
       urlGenerated = 'https\:\/\/coda-coda.github.io/handshake/Reader/index.html?them=Person_' + hashGenerated;
       document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
-      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
+      document.getElementById('urlGenerated').innerHTML = '<a class=\'tiny_text\' href=' + urlGenerated + '>' + urlGenerated + '</a>';
       updateQRCode(urlGenerated);
       document.getElementById('generatedContent').style.visibility = 'visible';
       ">
