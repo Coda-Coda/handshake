@@ -24,7 +24,10 @@
 
 </head>
 
-<body onload='document.getElementById("handshake2CustomLink").innerHTML = "<a class=\"tiny_text\" href=\"https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=" + them + "\">Click here for tips on how to shake hands without using your email address</a\>";'>
+<body onload='
+   document.getElementById("handshake2CustomLink").innerHTML = "<a class=\"tiny_text\" href=\"https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=" + them + "\">Click here for tips on how to shake hands without using your email address</a\>";
+    document.getElementById("handshake2CustomLinkWithOptional").innerHTML = "<a class=\"normal_text\" href=\"https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=" + them + "\">optional</a\>";
+   '>
   <br>
   <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
 
@@ -44,7 +47,7 @@
 
     <table class="center">
       <tr>
-        <td style="text-align: right;"><span class="normal_text">Email (optional):</span> </td>
+        <td style="text-align: right;"><span class="normal_text">Email (<span id="handshake2CustomLinkWithOptional"></span>):</span> </td>
         <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
       </tr>
       <tr>
