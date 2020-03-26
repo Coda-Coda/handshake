@@ -4,7 +4,7 @@ Here's how to generate an up to date version of: https://graphcommons.com/graphs
 
 Similar to:
 
-![Image of Handshake Connections as at 5:40pm 22nd March 2020](docs/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
+![Image of Handshake Connections as at 5:40pm 22nd March 2020](Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
 
 1. Go to https://graphcommons.com/ and sign in
 2. Click "Start a graph" or go to https://graphcommons.com/graphs/new
