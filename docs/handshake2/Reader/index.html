@@ -45,10 +45,8 @@
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
       urlGenerated = 'https\:\/\/docs.google.com/forms/d/e/1FAIpQLSeIDZrpksYUhL5DZ4T1mF-8lqj8a5tjO6SDk_MfzP4HIt3tDg/viewform?usp=pp_url&entry.895123374=Person_' + hashGenerated + '&entry.234110086=' + them;
-      document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
-      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
-      updateQRCode(urlGenerated);
-      document.getElementById('generatedContent').style.visibility = 'visible';
+      document.getElementById('redirectNotice').innerText = 'Redirecting to Google Forms shortly...';
+      window.location.href = urlGenerated;
       ">
     <input style="visibility: hidden; height: 0px; width: 0px" type="text"
       name="placeHolderSoThatBrowsersSavePassphrase" id="placeholder" rows="1" cols="1">
@@ -71,7 +69,7 @@
 
     <br>
     <input class="submit_button" type="submit" value="Click here to shake hands">
-  </form>  <div id="redirectNotice"></div>
+  </form>  <div class="normal_text" id="redirectNotice"></div>
 
 
   <br>
