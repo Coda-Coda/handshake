@@ -9,7 +9,31 @@
   </script>
 
   <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
-  <script type="application/javascript"></script>
+  <script>
+    function copyID() {
+      document.getElementById("hashedToCopy").value = "Person_" + hashGenerated;
+      document.getElementById("hashedToCopy").style.visibility = 'visible';
+      var copyText = document.getElementById("hashedToCopy");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      document.getElementById("hashedToCopy").style.visibility = 'hidden';
+      //alert("Copied: " + copyText.value);
+      alert("Copied");
+    }
+    function copyURL() {
+      document.getElementById("urlToCopy").value = urlGenerated;
+      document.getElementById("urlToCopy").style.visibility = 'visible';
+      var copyText = document.getElementById("urlToCopy");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      document.getElementById("urlToCopy").style.visibility = 'hidden';
+      //alert("Copied: " + copyText.value);
+      alert("Copied");
+    }
+  </script>
+
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,45 +46,11 @@
       text-align: center;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <em>
-    Type your unique passphrase here. It will be converted to a long unique ID.
-  </em>
-
-  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
-      hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
-      urlGenerated = 'https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=Person_' + hashGenerated;
-      document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
-      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
-      updateQRCode(urlGenerated);
-      document.getElementById('qrcode').style.visibility = 'visible';
-      ">
-    <input style="visibility: hidden; height: 0px; width: 0px" type="text" name="placeHolderSoThatBrowsersSavePassphrase" id="placeholder" rows="1" cols="1">
-    Unique Passphrase: <br>
-    <div style="font-size: small;"><em>(you make this up, then you should never change this. Please make sure it is something no-one else would choose so that you don't end up with the same ID as someone else.)</em> </div><br>
-    <input type="password" id="uniquePassphrase" name="pwd">
-    <br>
-    <input type="submit" value="Submit">
-  </form>
-
-
-  <!-- This is where our QRCode will appear in. -->
-  <div id="qrcode" style="visibility: hidden; width: 100%;"></div>
-
-
-  <em>Your unique ID is:</em>
-  <div id="hashed"></div>
-
-  <em>Your generated URL is: (which the QR code links to)</em>
-  <div id="urlGenerated"></div>
-
-  <br><br>
-  <em>How does this work?</em> See: <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a>
-  <br>
-  <br>
-  Please note that the current version of handshake <b>does not alert you</b> if a link between you and a case of Covid-19 is found - for now you would need to manually examine the publicly available data (see the links on <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a> - in particular the visualisation) looking for links between your hash/unique ID (see just above) and the hashes/unique IDs of others who have reported they are affected by Covid-19 on Handshake.
 
   <script type="text/javascript">
     function updateQRCode(text) {
@@ -77,6 +67,169 @@
 
     updateQRCode('ERROR');
   </script>
+
+  <br>
+  <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
+
+  <span class="subheading">Track your proximity to COVID-19</span>
+  <br>
+  <br>
+  <span class="normal_text">Create your anonymous id:</span>
+  <br>
+  <br>
+
+
+  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('uniquePassphrase').value);
+      urlGenerated = 'https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=Person_' + hashGenerated;
+      document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
+      document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
+      updateQRCode(urlGenerated);
+      document.getElementById('generatedContent').style.visibility = 'visible';
+      ">
+    <input style="visibility: hidden; height: 0px; width: 0px" type="text"
+      name="placeHolderSoThatBrowsersSavePassphrase" id="placeholder" rows="1" cols="1">
+
+    <span class="small_text">Please make sure it is something no-one else would choose so that you don't end up with the
+      same ID as someone else.
+      <br> Consider using <a class="small_text"
+        href="https://preshing.com/20110811/xkcd-password-generator/">https://preshing.com/20110811/xkcd-password-generator/</a>
+    </span><br>
+
+    <br>
+
+    <table class="center">
+
+      <tr>
+        <td><span class="normal_text">Unique Phrase:</span> </td>
+        <td><input type="password" id="uniquePassphrase" name="pwd"></td>
+      </tr>
+    </table>
+
+    <br>
+    <input class="submit_button" type="submit" value="Click here to generate your Handshake QR code">
+  </form>
+
+
+  <span id="generatedContent" style="visibility:hidden">
+    <div id="qrcode" style="width: 250px; background-color: white;  margin-left:auto; margin-right:auto;"></div>
+
+
+    <span class="small_text">Your anonymous ID is:</span>
+    <span class="tiny_text">
+      <div id="hashed"></div>
+    </span>
+    <button class="copy_button" onclick="copyID()">Click here to copy your anonymous ID to clipboard</button>
+
+    <br>
+
+    <span class="small_text">Your generated URL is:</span><span class="tiny_text">
+      <div id="urlGenerated"></div>
+    </span>
+    <span class="tiny_text">(send this to people you physically meet with if QR code scanning is not working)</span>
+    <br>
+    <button class="copy_button" onclick="copyURL()">Click here to copy your URL to clipboard</button>
+
+
+  </span>
+
+
+  <br>
+  <br>
+
+
+  <span class="normal_text">Scan someone’s QR code to handshake. Handshakes between anonymous ids are recorded
+    publicly.</span>
+
+  <br>
+  <br>
+
+  <span class="small_text">
+
+    <a class="normal_text" href="https://coda-coda.github.io/handshake/Checker/">View your proximity to cases of
+      COVID-19</a>
+    <br>
+    <a class="normal_text" href="https://forms.gle/DWQRNfaeBrwB3oD58">Submit your own health status</a>
+    <br>
+    <a class="normal_text" href="https://coda-coda.github.io/handshake/Share/">Share Handshake with others</a>
+    <br>
+  </span>
+
+  <br>
+  <br>
+
+
+
+  <span class="normal_text">How this works:
+    <br>
+    <span class="small_text">
+
+      <br>
+      Your phrase is '<a class="small_text"
+        href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">hashed</a>' to form a unique id.
+      <br>
+      <br>
+      This is done in your browser, your phrase in plain text never leaves your phone or computer.
+      <br>
+      <br>
+      Assuming you used a strong unique phrase, it is virtually impossible to go from the hash alone back to your
+      phrase.
+      <br>
+      <br>
+      However, people still may be able to <a class="small_text"
+        href="https://en.wikipedia.org/wiki/Data_re-identification">reidentify you</a>, especially those who know
+      your whereabouts or people you handshake with.
+      <br>
+      <br>
+      This is Open Source and so you can <a class="small_text" href="https://github.com/Coda-Coda/handshake/">check
+        the source code</a> or "View Source" in your browser as it is only HTML and Javascript.
+      <br>
+      <br>
+      No guarantee of privacy, accuracy of information or any guarantee whatsoever is provided.
+      </li>
+      </ul>
+    </span>
+
+    <br>
+    <br>
+
+    <span class="normal_text">See the public record (raw data):
+
+      <br>
+      <span class="small_text">
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing">Handshakes
+          Google Spreadsheet</a>
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing">Status
+          Reports Google Spreadsheet</a>
+        <br>
+
+      </span>
+
+      <br>
+
+      <span class="normal_text">If you want to get involved:</span>
+      <span class="small_text">
+        <br>
+        <br>
+        <a class="small_text" href="https://github.com/Coda-Coda/handshake/">Get involved on GitHub</a>
+        <br>
+
+        <a class="small_text" href="mailto:get.involved.handshake@gmail.com">Send an email to
+          get.involved.handshake@gmail.com</a>
+        <br>
+      </span>
+
+    </span>
+
+    <input id="hashedToCopy" style="visibility: hidden;"></input>
+    <!--Trick to enable copying to clipboard-->
+    <input id="urlToCopy" style="visibility:hidden;"></input>
+
+
 </body>
 
 </html>
