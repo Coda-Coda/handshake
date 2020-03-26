@@ -7,7 +7,7 @@ There's now a [visualisation of the recorded connections](https://graphcommons.c
 
 Here is what it looked like at 5:40pm on 22nd March 2020:
 
-![Image of Handshake Connections as at 5:40pm 22nd March 2020](public/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
+![Image of Handshake Connections as at 5:40pm 22nd March 2020](docs/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
 
 In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
 
@@ -15,10 +15,10 @@ When [viewing the visualisation](https://graphcommons.com/graphs/a150a176-fd30-4
 
 Here is a mock-up of what it could look like:
 
-![Image of mock-up of Handshake](public/Handshake_mockup.png)
+![Image of mock-up of Handshake](docs/Handshake_mockup.png)
 
 Feel free to implement some or all of the changes in this mock-up and make a pull request.
-The Word document that generated the mock-up is also available [here](public/Handshake_mockup.docx). This mock-up was contributed by an anonymous contributor.
+The Word document that generated the mock-up is also available [here](docs/Handshake_mockup.docx). This mock-up was contributed by an anonymous contributor.
 
 This repository is the location of a bare-bones version of Handshake, described below.
 
