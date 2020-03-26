@@ -11,7 +11,8 @@
   <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
   <script type="application/javascript"></script>
   <script>
-    function copyID() {
+function copyID() {
+    document.getElementById("hashedToCopy").value = "Person_" + hashGenerated;
     document.getElementById("hashedToCopy").style.visibility = 'visible';
     var copyText = document.getElementById("hashedToCopy");
     copyText.select();
@@ -22,6 +23,7 @@
     alert("Copied");
 }
 function copyURL() {
+  document.getElementById("urlToCopy").value = urlGenerated;
   document.getElementById("urlToCopy").style.visibility = 'visible';
   var copyText = document.getElementById("urlToCopy");
     copyText.select();
@@ -82,8 +84,6 @@ function copyURL() {
       urlGenerated = 'https\:\/\/coda-coda.github.io/handshake/Reader/index.html?them=Person_' + hashGenerated;
       document.getElementById('hashed').innerText = 'Person_' + hashGenerated;
       document.getElementById('urlGenerated').innerHTML = '<a href=' + urlGenerated + '>' + urlGenerated + '</a>';
-      document.getElementById('hashedToCopy').value = 'Person_' + hashGenerated;
-      document.getElementById('urlToCopy').value = urlGenerated;
       updateQRCode(urlGenerated);
       document.getElementById('generatedContent').style.visibility = 'visible';
       ">
