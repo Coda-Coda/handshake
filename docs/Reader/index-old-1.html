@@ -23,7 +23,7 @@
 
 <body onload='document.getElementById("handshake2CustomLink").innerHTML = "<a href=\"https\:\/\/coda-coda.github.io/handshake/handshake2/Reader/index.html?them=" + them + "\">Use this version instead</a\>";'>
   <em>
-    Type your email address and privacy passphrase here. </br>
+    Type your email address and privacy passphrase here. <br>
     It will be converted to a long unique id and added to the id of the person whose QR code you scanned.
     Then it will generate a URL to a pre-filled Google Form, which you will be redirected to when you click submit.
   </em>
@@ -39,14 +39,14 @@
       window.location.href = urlGenerated;
       ">
 
-    Email address: </br>
-    <div style="font-size: small;"><em>Prefer not to enter your email? <div id="handshake2CustomLink"></div></em> </div></br>
+    Email address: <br>
+    <div style="font-size: small;"><em>Prefer not to enter your email? <div id="handshake2CustomLink"></div></em> </div><br>
     <input type="text" name="email" id="email" rows="8" cols="50">
-    </br>
-    Privacy Passphrase:</br>
-    <div style="font-size: small;"><em>(you make this up, then you should never change this)</em> </div></br>
+    <br>
+    Privacy Passphrase:<br>
+    <div style="font-size: small;"><em>(you make this up, then you should never change this)</em> </div><br>
     <input type="password" id="privacyPassphrase" name="pwd">
-    </br>
+    <br>
     <input type="submit" value="Submit">
   </form>
   <div id="redirectNotice"></div>
@@ -55,14 +55,14 @@
   <div id="hashed"></div>
 
   <em>Your generated URL is:</em>
-  </br>
+  <br>
   <div style="font-size: small;"><em>(click it once you're done if the redirect does not work)</em></div>
   <div id="urlGenerated"></div>
 
-  </br></br>
+  <br><br>
   <em>How does this work?</em> See: <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a>
-  </br>
-  </br>
+  <br>
+  <br>
   Please note that the current version of handshake <b>does not alert you</b> if a link between you and a case of Covid-19 is found - for now you would need to manually examine the publicly available data (see the links on <a href="https://github.com/Coda-Coda/handshake">https://github.com/Coda-Coda/handshake</a> - in particular the visualisation) looking for links between your hash/unique ID (see just above) and the hashes/unique IDs of others who have reported they are affected by Covid-19 on Handshake.
 
 
