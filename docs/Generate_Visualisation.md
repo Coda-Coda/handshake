@@ -13,7 +13,8 @@ Similar to:
 5. Click "Continue"
 6. Click "Save"
 7. Name your graph and choose any option, then click "Save"
-8. Done!
+8. Consider changing the node type colours to red for Confirmed, yellow for Suspected, green for Healthy, grey for Unreported and blue for locations. (see https://vimeo.com/125936064)
+9. Done!
 
 You've generated a graph with the latest data from what has been reported on the Handshake forms.
 
