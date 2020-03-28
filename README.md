@@ -1,26 +1,10 @@
-I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Covid-19.
-I'm calling it Handshake for now.
+I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Covid-19. I'm calling it Handshake for now.
+
+To try it out visit: https://coda-coda.github.io/handshake/Generator/
 
 For an overview of the Handshake _idea_ see: https://coda-coda.github.io/handshake/
 
-There's now a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](docs/Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
-
-Here is what it looked like at 5:40pm on 22nd March 2020:
-
-![Image of Handshake Connections as at 5:40pm 22nd March 2020](docs/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
-
-In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
-
-When [viewing the visualisation](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185) you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
-
-Here is a mock-up of what it could look like:
-
-![Image of mock-up of Handshake](docs/Handshake_mockup.png)
-
-Feel free to implement some or all of the changes in this mock-up and make a pull request.
-The Word document that generated the mock-up is also available [here](docs/Handshake_mockup.docx). This mock-up was contributed by an anonymous contributor.
-
-This repository is the location of a bare-bones version of Handshake, described below.
+This repository is the location of a basic working version of Handshake, described below.
 
 # Brief overview:
  - When 2 people meet, one person goes to [Handshake Generator](https://coda-coda.github.io/handshake/Generator/) and generates a Handshake QR code by entering their email address and optionally a privacy passphrase (or alternatively just a unique phrase).
@@ -33,29 +17,29 @@ This repository is the location of a bare-bones version of Handshake, described 
  
  - Handshake data can then used by anybody for purposes related to stopping the spread of Covid-19. For example, when someone is reported as having confirmed Covid-19, the data from Handshakes can be used to warn those who might have been exposed while the person was contagious to be careful (due to the current setup this would require people to regularly check a Handshake page that has not yet been created to check their risk, or it could be implemented so that the check could also happen automatically whenever they next Handshake).
 
+# Further thoughts on implementation
 
-# Further thoughts:
- - As an overview of design choices: this basic implementation uses a hash of a user's email and a passphrase to aid privacy (or just a unique phrase), a centralised data store (Google Sheets), decentralised 'logins', is a webpage and uses only free tools.
- - This website/set up was simple to create, it wouldn't be too hard to create an improved version or for anyone with some resources to do so.
- - It does not rely upon users installing any apps, making it easily accessible.
- - It does not rely upon users sharing their location history.
- - It replaces the somewhat dangerous practice (in these times) of physically shaking hands.
- - Privacy is still an issue that would need to be tackled. Using a unique privacy passphrase and then hashing people's email addresses with it (or hashing a unique phrase) is possibly a bit helpful, but it does nothing to protect you from people you Handshake with that might want to reveal your identity. Plus, I'm not a cryptography or privacy expert so can give no guarantees around the privacy of this system whatsoever.
- - A privacy passphrase is added to the users email before hashing so that a person with a lot of email addresses can't just hash all the email addresses in their directory to match with publicly available data.
- - The alternate implementation [handshake2](https://coda-coda.github.io/handshake/handshake2/) uses just a unique phrase that gets hashed and it is hoped that no two users come up with the identical unique phrase but it offers slightly more privacy as users don't need to volunteer their email address to the Handshake webpage. And it makes very clear that users _won't_ get email notifications (as in this particular implementation of the handshake idea, email notifications are not possible - though other implementations with different approaches to privacy could). To generate the same hash using Handshake2 a user with the email "test@test.com" and privacy passphrase "OneTwoThree" would use "test@test.comOneTwoThree" as their unique phrase.
- - This idea would still work if the information volunteered was stored privately rather than made publicly available. The onus would then be on the organisation that controlled the data to properly analyse it and make that analysis available to the people who it would be helpful for.
- - People do not need to log in to Handshake every time to generate a QR code, they can generate it once at the [Handshake Generator](https://coda-coda.github.io/handshake/Generator/) then keep their static unique QR code for future use.
- - The use of Google forms and sheets as opposed to a database, while unorthodox, does make it easy to publicly share data in an append only manner, is free, and seems appropriate for this bare-bones version.
- - This does rely on trusting that people don't mess with Handshake by adding fake entries, but I am hopeful that this would not happen. Fully featured versions of Handshake could mitigate this in various ways I'm sure.
-- You can have QR codes for locations such as at each coffee table or train seat - generate them [here](https://coda-coda.github.io/handshake/locations/Generator/). QR codes should be displayed at locations and _scanned by people that visit_ them (rather than having the location owner scan the QR code of the customer, for example).
- - The Handshake idea was partly inspired by [Co-Epi](https://www.coepi.org/).
+For further thoughts on this Handshake implementation see: https://coda-coda.github.io/handshake/Documents/Handshake-Implementation.pdf
 
- # Future work ideas: (just ideas, I am not in a position to work on them)
- - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of needing a total of n(n-1)/2 scans.
- - Taking research into how Covid-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
- - Looking more technically into how best to preserve privacy balanced against usefulness.
+# Visualisation
 
-Feedback can be publicly submitted via github issues here: https://github.com/Coda-Coda/handshake/-/issues/new (you will need to sign in to github - you can use a Google account to sign in to github)
+There's a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](docs/Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
+
+Here is what it looked like at 5:40pm on 22nd March 2020:
+
+![Image of Handshake Connections as at 5:40pm 22nd March 2020](docs/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
+
+In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
+
+When [viewing the visualisation](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185) you could search for your own first 8 characters (just using Ctrl+f or Cmd+f) then have a look to see how close/far you are from suspected or confirmed cases of Covid-19.
+
+# Want to get involved or have feedback?
+
+[Report an issue on GitHub (publicly)](https://github.com/Coda-Coda/handshake/-/issues/new)
+
+[Get involved on GitHub](https://github.com/Coda-Coda/handshake/issues)
+
+[Send an email to get.involved.handshake@gmail.com](mailto:get.involved.handshake@gmail.com)
 
 # Please take this idea and make it better - I am not in a position to do so
 Lastly: please feel free to take this idea and make it better :)
