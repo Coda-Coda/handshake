@@ -1,3 +1,5 @@
+![Image of Handshake - Track your proximity to Covid-19.](docs/title.png)
+
 I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Covid-19. I'm calling it Handshake for now.
 
 To try it out visit: https://coda-coda.github.io/handshake/Generator/
