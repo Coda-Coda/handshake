@@ -1,18 +1,211 @@
-
 <!DOCTYPE html>
+<html>
 
 <head>
 <link rel="shortcut icon" href="https://coda-coda.github.io/handshake/favicon.ico">
-    
-<style type="text/css" media="screen">
-  body { text-align:center; }
-</style>
-<script>
-    window.location.href = "https://github.com/Coda-Coda/handshake/blob/master/docs/Generate_Visualisation.md";
-</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="qrcode.js">
+  </script>
+  <script type="text/javascript" src="html5-qrcode.js">
+  </script>
 
+  <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
+  <script type="application/javascript"></script>
+  <script>
+function copyID() {
+    document.getElementById("hashedToCopy").value = partialID;
+    document.getElementById("hashedToCopy").style.visibility = 'visible';
+    var copyText = document.getElementById("hashedToCopy");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    document.getElementById("hashedToCopy").style.visibility = 'hidden';
+    //alert("Copied: " + copyText.value);
+    document.getElementById("copy_button_text_response").innerText = "Copied"
+}
+  </script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Handshake Checker
+  </title>
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <em>Redirecting...</em>
+  
+  <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
+
+  <span class="subheading">Track your proximity to COVID-19</span>
+  <br>
+  <br>
+  <span class="normal_text">Check how close you are to COVID-19:</span>
+  <br>
+  <br>
+
+  <form name="IDForm" id="IDForm" onsubmit="event.preventDefault();
+      hashGenerated = new Hashes.SHA256().hex(document.getElementById('email').value + document.getElementById('privacyPassphrase').value);
+      charactersToKeepFromID = 8;
+      fullID = 'Person_' + hashGenerated;
+      partialID = 'Person_' + hashGenerated.slice(0, charactersToKeepFromID);
+      document.getElementById('partialID').innerText = partialID;
+      document.getElementById('generatedContent').style.visibility = 'visible';
+      document.getElementById('copy_button_text_response').innerText = '';
+      ">
+
+
+    <table class="center">
+      <tr>
+        <td style="text-align: right;"><span class="normal_text">Email (optional):</span> </td>
+        <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;"><span class="secondary_text">Hand</span><span class="normal_text">shake</span>
+          <span class="normal_text">Password:</span> </td>
+        <td><input type="password" id="privacyPassphrase" name="pwd"></td>
+      </tr>
+    </table>
+    <span class="tiny_text">If you use a unique phrase without your email then leave the email field blank and put your phrase as the password.</span>
+    <br>
+    <input class="submit_button" type="submit"
+      value="Click here to generate your anonymous ID to use when checking">
+  </form>
+
+
+  <!-- This is where our QRCode will appear in. -->
+  <span id="generatedContent" style="visibility:hidden">
+
+    <span class="small_text">Your anonymous ID is:</span>
+    <span class="tiny_text">
+      <div id="partialID"></div>
+    </span>
+    <button class="copy_button" onclick="copyID()"><span class="secondary_text">Click here to copy your anonymous ID to clipboard</span></button>
+    <br>
+    <span id="copy_button_text_response" class="small_text"></span>
+    <br>
+    <input id="hashedToCopy" style="visibility: hidden;"></input> <!--Trick to enable copying to clipboard-->
+  </span>
+
+  <br>
+  
+
+  <span class="normal_text">Once you've copied your anonymous ID:
+    <br>
+    <br>Click on the search icon in the top left of the frame below and paste it in
+    <br>
+    <br>Select the top search result that pops up
+    <br>
+    <br>You will now be highlighted within the visualisation of connections
+    <br>
+    <br>Have a look to see how close you are to someone who has reported their status as Confirmed (red) or Suspected (yellow) on Handshake. (Locations are blue)
+    <br>
+    <br>Click the fullscreen icon on the bottom left for a larger view
+  </span>
+  <br>
+  <br>
+  <br>
+  
+
+  <iframe src="https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185/embed?fitgraph=true" frameborder="0" style="overflow:hidden;border:1px solid #DDDDDD;width:1px;min-width:100%;height:800px;min-height:400px;" width="100%" height="400" allowfullscreen></iframe>
+
+  <br>
+  <br>
+  <br>
+
+  <span class="small_text">
+
+    <a class="normal_text" href="https://coda-coda.github.io/handshake/Generator/">Generate your own Handshake QR code</a>
+    <br>
+    <a class="normal_text" href="https://forms.gle/DWQRNfaeBrwB3oD58">Submit your own health status</a>
+    <br>
+    <a class="normal_text" href="https://coda-coda.github.io/handshake/Share/">Share Handshake with others</a>
+    <br>
+  </span>
+
+  <br>
+  <br>
+
+
+
+  <span class="normal_text">How this works:
+    <br>
+    <span class="small_text">
+
+      <br>
+      Your email address and password are combined then '<a class="small_text"
+        href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">hashed</a>' to form a unique id.
+      <br>
+      <br>
+      This is done in your browser, your email address in plain text never leaves your phone or computer. (If you prefer not to use your email address at all, you can).
+      <br>
+      <br>
+      Due to this you do not and cannot receive email notifications from submitting your email address on this page.
+      <br>
+      <br>
+      Assuming you used a strong unique password, it is virtually impossible to go from the hash alone back to your
+      email address.
+      <br>
+      <br>
+      However, people still may be able to <a class="small_text"
+        href="https://en.wikipedia.org/wiki/Data_re-identification">reidentify you</a>, especially those who know
+      your whereabouts or people you handshake with.
+      <br>
+      <br>
+      This is Open Source and so you can <a class="small_text" href="https://github.com/Coda-Coda/handshake/">check
+        the source code</a> or "View Source" in your browser as it is only HTML and Javascript.
+      <br>
+      <br>
+      No guarantee of privacy, accuracy of information <a class="small_text" href="https://github.com/Coda-Coda/handshake/blob/master/LICENSE">or any guarantee whatsoever</a> is provided.
+      </li>
+      </ul>
+    </span>
+
+    <br>
+    <br>
+
+    <span class="normal_text">See the public record (raw data):
+
+      <br>
+      <span class="small_text">
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing">Handshakes
+          Google Spreadsheet</a>
+        <br>
+        <a class="small_text"
+          href="https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing">Status
+          Reports Google Spreadsheet</a>
+        <br>
+
+      </span>
+
+      <br>
+
+      <span class="normal_text">If you want to get involved:</span>
+      <span class="small_text">
+        <br>
+        <br>
+        <a class="small_text" href="https://github.com/Coda-Coda/handshake/issues/new">Report an issue on GitHub (publicly)</a>
+        <br>
+        <a class="small_text" href="https://github.com/Coda-Coda/handshake/">Get involved on GitHub</a>
+        <br>
+
+        <a class="small_text" href="mailto:get.involved.handshake@gmail.com">Send an email to
+          get.involved.handshake@gmail.com</a>
+        <br>
+      </span>
+
+    </span>
+
+
+    
+
 </body>
