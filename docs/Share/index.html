@@ -1,24 +1,65 @@
 <!DOCTYPE html>
+<html>
 
 <head>
 <link rel="shortcut icon" href="https://coda-coda.github.io/handshake/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style type="text/css" media="screen">
-        body {
-            text-align: center;
-        }
-    </style>
-    <script>
-
-    </script>
-
+  <title>
+    Share Handshake
+  </title>
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+  <script>
+    function copyLink() {
+        document.getElementById("toCopy").value = "https://coda-coda.github.io/handshake/Generator/";
+        document.getElementById("toCopy").style.visibility = 'visible';
+        var copyText = document.getElementById("toCopy");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        document.getElementById("toCopy").style.visibility = 'hidden';
+        //alert("Copied: " + copyText.value);
+        alert("Copied");
+    }
+      </script>
+    
 </head>
 
 <body>
-    <em>To share, send the following link to others: <a
-            href="https://coda-coda.github.io/handshake/Generator/">https://coda-coda.github.io/handshake/Generator/</a></em>
-    <br>
-    However, if you want someone to Handshake with you, visit the above link yourself and then ask them to scan the QR code.
+  <br>
+  <h1><span class="heading_hand">Hand</span><span class="heading_shake">shake</span></h1>
+
+  <span class="subheading">Track your proximity to COVID-19</span>
+  <br>
+  <br>
+
+  <span class="normal_text">
+      <span class="secondary_text">Share the link:</span>
+      <br>
+      <br>
+      <a class="normal_text" href="https://coda-coda.github.io/handshake/Generator/">https://coda-coda.github.io/handshake/Generator/</a>
+      <br>
+      <button class="copy_button" style="font-size:medium;" onclick="copyLink()"><span class="normal_text">Click here to copy the link</span></button>
+      <br>
+      <input id="toCopy" style="visibility: hidden;"></input> <!--Trick to enable copying to clipboard-->
+      <br>
+      <span class="secondary_text">Share on Facebook:</span>
+      <br>
+      <br>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fcoda-coda.github.io%2Fhandshake%2FGenerator%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+      <br>
+      <br>    
+   </span>
+
+   <span class="small_text">However, if you want someone you're with to Handshake with you: 
+       <br>
+    Visit the above link yourself and then ask them to scan your QR code.</span>
+
 </body>
