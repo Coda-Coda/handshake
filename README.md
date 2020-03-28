@@ -51,7 +51,7 @@ This repository is the location of a bare-bones version of Handshake, described 
  - The Handshake idea was partly inspired by [Co-Epi](https://www.coepi.org/).
 
  # Future work ideas: (just ideas, I am not in a position to work on them)
- - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of n(n-1)/2 codes.
+ - It could also be able to generate QR codes for events with groups of people. Then everyone attending just needs to scan one QR code instead of needing a total of n(n-1)/2 scans.
  - Taking research into how Covid-19 is spread into account. E.g. how useful is tracking meetings between people vs tracking interactions with physical places.
  - Looking more technically into how best to preserve privacy balanced against usefulness.
 
