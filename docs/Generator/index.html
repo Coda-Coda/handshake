@@ -2,7 +2,14 @@
 <html>
 
 <head>
-<link rel="shortcut icon" href="https://coda-coda.github.io/handshake/favicon.ico">
+
+  <meta property="og:url" content="https://coda-coda.gitlab.io/handshake/Generator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Handshake: Track your proximity to COVID-19" />
+  <meta property="og:description" content="Scan someone’s QR code to handshake. Handshakes between anonymous ids are recorded publicly." />
+  <meta property="og:image" content="https://coda-coda.gitlab.io/handshake/large_logo.png" />
+
+  <link rel="shortcut icon" href="https://coda-coda.github.io/handshake/favicon.ico">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="qrcode.js">
   </script>
@@ -12,28 +19,28 @@
   <script type="application/javascript" src="../jsHashes-master/hashes.js"></script>
   <script type="application/javascript"></script>
   <script>
-function copyID() {
-    document.getElementById("hashedToCopy").value = "Person_" + hashGenerated;
-    document.getElementById("hashedToCopy").style.visibility = 'visible';
-    var copyText = document.getElementById("hashedToCopy");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    document.getElementById("hashedToCopy").style.visibility = 'hidden';
-    //alert("Copied: " + copyText.value);
-    alert("Copied");
-}
-function copyURL() {
-  document.getElementById("urlToCopy").value = urlGenerated;
-  document.getElementById("urlToCopy").style.visibility = 'visible';
-  var copyText = document.getElementById("urlToCopy");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    document.getElementById("urlToCopy").style.visibility = 'hidden';
-    //alert("Copied: " + copyText.value);
-    alert("Copied");
-}
+    function copyID() {
+      document.getElementById("hashedToCopy").value = "Person_" + hashGenerated;
+      document.getElementById("hashedToCopy").style.visibility = 'visible';
+      var copyText = document.getElementById("hashedToCopy");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      document.getElementById("hashedToCopy").style.visibility = 'hidden';
+      //alert("Copied: " + copyText.value);
+      alert("Copied");
+    }
+    function copyURL() {
+      document.getElementById("urlToCopy").value = urlGenerated;
+      document.getElementById("urlToCopy").style.visibility = 'visible';
+      var copyText = document.getElementById("urlToCopy");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      document.getElementById("urlToCopy").style.visibility = 'hidden';
+      //alert("Copied: " + copyText.value);
+      alert("Copied");
+    }
   </script>
 
 
@@ -92,7 +99,8 @@ function copyURL() {
 
     <table class="center">
       <tr>
-        <td style="text-align: right;"><span class="normal_text">Email (<a class="normal_text" href="https://coda-coda.github.io/handshake/handshake2/Generator/">optional</a>):</span> </td>
+        <td style="text-align: right;"><span class="normal_text">Email (<a class="normal_text"
+              href="https://coda-coda.github.io/handshake/handshake2/Generator/">optional</a>):</span> </td>
         <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
       </tr>
       <tr>
@@ -101,12 +109,14 @@ function copyURL() {
         <td><input type="password" id="privacyPassphrase" name="pwd"></td>
       </tr>
     </table>
-    <span class="tiny_text"><a class="tiny_text" href="https://coda-coda.github.io/handshake/handshake2/Generator/">Click here for tips on generating a QR code without using your email address</a></span>
+    <span class="tiny_text"><a class="tiny_text"
+        href="https://coda-coda.github.io/handshake/handshake2/Generator/">Click here for tips on generating a QR code
+        without using your email address</a></span>
     <br>
-    <span class="tiny_text"><a class="tiny_text" href="https://coda-coda.github.io/handshake/locations/Generator/">Click here to generate a QR code for a location instead</a></span>
+    <span class="tiny_text"><a class="tiny_text" href="https://coda-coda.github.io/handshake/locations/Generator/">Click
+        here to generate a QR code for a location instead</a></span>
     <br>
-    <input class="submit_button" type="submit"
-      value="Click here to generate your Handshake QR code">
+    <input class="submit_button" type="submit" value="Click here to generate your Handshake QR code">
   </form>
 
 
@@ -130,7 +140,7 @@ function copyURL() {
     <br>
     <button class="copy_button" onclick="copyURL()">Click here to copy your URL to clipboard</button>
 
-    
+
   </span>
 
   <br>
@@ -168,7 +178,8 @@ function copyURL() {
         href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">hashed</a>' to form a unique id.
       <br>
       <br>
-      This is done in your browser, your email address in plain text never leaves your phone or computer. (If you prefer not to use your email address at all, you can).
+      This is done in your browser, your email address in plain text never leaves your phone or computer. (If you prefer
+      not to use your email address at all, you can).
       <br>
       <br>
       Due to this you do not and cannot receive email notifications from submitting your email address on this page.
@@ -187,7 +198,8 @@ function copyURL() {
         the source code</a> or "View Source" in your browser as it is only HTML and Javascript.
       <br>
       <br>
-      No guarantee of privacy, accuracy of information <a class="small_text" href="https://github.com/Coda-Coda/handshake/blob/master/LICENSE">or any guarantee whatsoever</a> is provided.
+      No guarantee of privacy, accuracy of information <a class="small_text"
+        href="https://github.com/Coda-Coda/handshake/blob/master/LICENSE">or any guarantee whatsoever</a> is provided.
       </li>
       </ul>
     </span>
@@ -217,7 +229,8 @@ function copyURL() {
       <span class="small_text">
         <br>
         <br>
-        <a class="small_text" href="https://github.com/Coda-Coda/handshake/issues/new">Report an issue on GitHub (publicly)</a>
+        <a class="small_text" href="https://github.com/Coda-Coda/handshake/issues/new">Report an issue on GitHub
+          (publicly)</a>
         <br>
         <a class="small_text" href="https://github.com/Coda-Coda/handshake/">Get involved on GitHub</a>
         <br>
@@ -229,7 +242,8 @@ function copyURL() {
 
     </span>
 
-    <input id="hashedToCopy" style="visibility: hidden;"></input> <!--Trick to enable copying to clipboard-->
+    <input id="hashedToCopy" style="visibility: hidden;"></input>
+    <!--Trick to enable copying to clipboard-->
     <input id="urlToCopy" style="visibility:hidden;"></input>
 
 </body>
