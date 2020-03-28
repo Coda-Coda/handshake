@@ -9,19 +9,18 @@ For an overview of the Handshake _idea_ see: https://coda-coda.github.io/handsha
 This repository is the location of a basic working version of Handshake, described below.
 
 # Brief overview:
- - When 2 people meet, one person goes to [Handshake Generator](https://coda-coda.github.io/handshake/Generator/) and generates a Handshake QR code by entering their email address and optionally a privacy passphrase (or alternatively just a unique phrase).
- - Alternatively, [locations can generate their own QR code](https://coda-coda.github.io/handshake/locations/Generator/) which can be displayed and scanned by people visiting.
- - The other person scans this QR code which takes them to [Handshake Reader](https://coda-coda.github.io/handshake/Reader) they also enter their email address and privacy passphrase (or just a unique phrase).
+ - When 2 people meet, one person goes to [Handshake Generator](https://coda-coda.github.io/handshake/Generator/) and generates a Handshake QR code by entering their email address and Handshake password (or alternatively just a unique phrase).
+ - Alternatively, [locations can generate their own QR code](https://coda-coda.github.io/handshake/locations/Generator/) which can be displayed and then be scanned by people visiting.
+ - The other person scans this QR code which takes them to [Handshake Reader](https://coda-coda.github.io/handshake/Reader) they also enter their email address and Handshake password (or just a unique phrase).
  - They then are redirected (or can click the link) which takes them to a pre-filled Google Form which they simply submit (no need to log in).
- - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their privacy passphrase - or just the hash of their unique phrase)
+ - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their Handshake password - or just the hash of their unique phrase)
  - People can report their status, e.g. healthy, suspected, or confirmed to Handshake by filling out [this form](https://forms.gle/DWQRNfaeBrwB3oD58), the responses are available publicly [here](https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing)
- - These are the links to the [Generator](https://coda-coda.github.io/handshake/handshake2/Generator/) and [Reader](https://coda-coda.github.io/handshake/handshake2/Reader/) of handshake2, which uses a unique phrase instead of an email address and privacy passphrase. The two versions are compatible and use the same Google Forms and Spreadsheets.
  
  - Handshake data can then used by anybody for purposes related to stopping the spread of Covid-19. For example, when someone is reported as having confirmed Covid-19, the data from Handshakes can be used to warn those who might have been exposed while the person was contagious to be careful (due to the current setup this would require people to regularly check a Handshake page that has not yet been created to check their risk, or it could be implemented so that the check could also happen automatically whenever they next Handshake).
 
-# Further thoughts on implementation
+# Further details
 
-For further thoughts on this Handshake implementation see: [this link](https://coda-coda.github.io/handshake/Documents/Handshake-Implementation.pdf)
+For further thoughts on this Handshake implementation see: [this pdf](https://coda-coda.github.io/handshake/Documents/Handshake-Implementation.pdf). It includes a few comments about design choices, privacy, and other thoughts.
 
 To view all the Google Docs/Forms/Spreadsheets associated with this Handshake project go to: [this link](https://drive.google.com/drive/folders/1QyTqI0OCHrU2mA-SdoL0u5QEfasWZZ8h?usp=sharing)
 
