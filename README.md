@@ -22,6 +22,7 @@ This repository is the location of a basic working version of Handshake, describ
 # Further thoughts on implementation
 
 For further thoughts on this Handshake implementation see: https://coda-coda.github.io/handshake/Documents/Handshake-Implementation.pdf
+To view all the Google Docs/Forms/Spreadsheets associated with this Handshake project go to: [this link](https://drive.google.com/drive/folders/1QyTqI0OCHrU2mA-SdoL0u5QEfasWZZ8h?usp=sharing)
 
 # Visualisation
 
