@@ -28,9 +28,9 @@ To view all the Google Docs/Forms/Spreadsheets associated with this Handshake pr
 
 There's a [visualisation of the recorded connections](https://graphcommons.com/graphs/a150a176-fd30-4830-a5df-a1c655bd8185). Note that this needs to be manually refreshed by me so may be out of date. To generate an up to date version yourself see [these instructions](docs/Generate_Visualisation.md). For readability it only shows the first 8 characters of the hashes/unique IDs. 
 
-Here is what it looked like at 5:40pm on 22nd March 2020:
+Here is what it looked like at 3pm on the 29th of March 2020:
 
-![Image of Handshake Connections as at 5:40pm 22nd March 2020](docs/Visualisation&#32;at&#32;2020-03-22&#32;at&#32;5.42&#32;PM.png)
+![Image of Handshake Connections as at 3pm on the 29th of March 2020](docs/Visualisation&#32;at&#32;2020-03-29&#32;at&#32;2.57&#32;PM.png)
 
 In this image, green denotes a person reporting as healthy (and never as sick or suspected), blue denotes the locations, and grey denotes people that have never reported their health status on Handshake but have used Handshake to connect with someone.
 
