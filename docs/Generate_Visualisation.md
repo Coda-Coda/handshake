@@ -21,3 +21,5 @@ You've generated a graph with the latest data from what has been reported on the
 Feel free to [make a copy of the Google Sheet that helps implement this](https://docs.google.com/spreadsheets/d/10y7cufEh8_1pYc0X4VwJ-5uBc5ztbrQABjTVg9BF_ag/copy).
 
 It currently includes only the first 8 characters of the unique id, for readability. This could be changed by altering the value in the Variables sheet after [making a copy](https://docs.google.com/spreadsheets/d/10y7cufEh8_1pYc0X4VwJ-5uBc5ztbrQABjTVg9BF_ag/copy).
+
+You may also be interested in trying out a [very simple Google Sheet Handshake Checker](https://docs.google.com/spreadsheets/d/19uqjzeGC0XvTuJnZVDC6QBUW_lNB_MtgqZVO_JdUlsQ/copy). Make a copy by clicking the link then enter your ID e.g. "Person_57136aa8". It will show you whether any people up to 3 degrees away from you on Handshake have reported as Confirmed. It uses up to date data.
