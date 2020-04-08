@@ -6,6 +6,8 @@ To try it out visit: https://coda-coda.github.io/handshake/Generator/
 
 For an overview of the Handshake _idea_ see: https://coda-coda.github.io/handshake/
 
+For a few ideas related to deciding whether to develop the Handshake idea further see: [here](docs/Comments_about_developing_further.md)
+
 This repository is the location of a basic working version of Handshake, described below.
 
 # Brief overview:
@@ -15,7 +17,7 @@ This repository is the location of a basic working version of Handshake, describ
  - They then are redirected (or can click the link) which takes them to a pre-filled Google Form which they simply submit (no need to log in).
  - The publicly accessible [Google Spreadsheet](https://docs.google.com/spreadsheets/d/11LaeMly8CQdM7R7MsvE2GSdWZLySA4hNaQ9GrBg53TE/edit?usp=sharing) then has a record of this interaction (recording the date/time and the SHA256 hashes of the two people's email addresses concatenated with their Handshake password - or just the hash of their unique phrase)
  - People can report their status, e.g. healthy, suspected, or confirmed to Handshake by filling out [this form](https://forms.gle/DWQRNfaeBrwB3oD58), the responses are available publicly [here](https://docs.google.com/spreadsheets/d/1hcjN_L62VK7hPSIKkfc0YRdFE8ULYG-ebpGgSw3kxgc/edit?usp=sharing)
- 
+
  - Handshake data can then used by anybody for purposes related to stopping the spread of Covid-19. For example, when someone is reported as having confirmed Covid-19, the data from Handshakes can be used to warn those who might have been exposed while the person was contagious to be careful (due to the current setup this would require people to regularly check a Handshake page that has not yet been created to check their risk, or it could be implemented so that the check could also happen automatically whenever they next Handshake).
 
 # Further details
