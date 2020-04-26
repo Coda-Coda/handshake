@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    Handshake: Easy Email Exchange - Generate your QR code
+    Handshake - Generate your QR code
   </title>
   <style type="text/css" media="screen">
     body {
@@ -54,101 +54,37 @@
   <br>
   <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
   <br>
-  <span class="normal_text" style="font-size: medium;">Easy Email Exchange</span>
-  <br>
-  <br>
   <span class="subheading">Make contact tracing easier.</span>
   <br>
   <br>
 
-  <span class="normal_text">How to Handshake: Scan someone’s QR code, then send them the auto-generated email, now you both have a record of the connection.</span>
+  <span class="normal_text">I make my QR </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate.html">here</a><span class="normal_text"> and save it on my phone.</span>
+  <br>
+  <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
+  <br>
+  
+  <span class="normal_text">We meet. You scan my QR from a safe distance and follow the prompts to send me an email. Now we both have a record of our meeting.</span>
+  <br>
+  <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
+  <br>
+  <span class="normal_text">To contact trace, I search my email for 'handshake'. All my meetings appear, in date order, with contact details.</span>
+  
+  
   <br>
   <br>
 
-  <span class="secondary_text" style="font-size: larger;">Generate your own QR code below:</span>
-  <br>
-  <span class="normal_text">Or <a class="normal_text" href=lock_screen.html>easily generate a QR code you can screenshot for your lock screen.</a></span>
-  <br>
-  <br>
-
-  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
-      mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a <a href=\'https\:\/\/coda-coda.github.io/handshake/EEE/\'>Handshake Easy Email Exchange</a> interaction.';
-      document.getElementById('mailtoLink').innerText = mailtoLink
-      updateQRCode(mailtoLink);
-      document.getElementById('generatedContent').style.visibility = 'visible';
-      ">
-
-    <table class="center">
-      <tr>
-        <td style="text-align: right;"><span class="normal_text">Your email address:</span> </td>
-        <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
-      </tr>
-    </table>
-    <input class="submit_button" type="submit" value="Click here to generate your own QR code">
-  </form>
-
-
-  <!-- This is where our QRCode will appear in. -->
-  <span id="generatedContent" style="visibility:hidden">
-    <span class="normal_text">Now ask people you physically meet with to scan your QR code</span>
-    <br>
-    </span>
-    <br>
-    <div id="qrcode" style="width: 250px; background-color: white;  margin-left:auto; margin-right:auto;"></div>
-    
-
-  </span>
-
+  
+  
 
   <br>
   <br>
-
-
-
-  <span class="normal_text">How this works:
-    <br>
-    <span class="small_text">
-      <br>
-      Your email address is included in the QR code.
-      <br>
-      <br>
-      When someone scans your QR code it opens their email app, with a pre-filled email addressed to you.
-      <br>
-      <br>
-      They simply click send, sending an email to you.
-      <br>
-      <br>
-      Now you both have each other's email address and a record of the time you met.
-      <br>
-      <br>
-      Later on, you can search your emails for "Handshake Record" as the subject in both sent and received emails.
-      <br>
-      <br>
-      This information can be used to help with contact tracing.
-    </span>
-
-
-    <br>
-    <br>
-
-    <span class="small_text">If you want to use a different QR code generator, use the following text:</span>
-    <span class="tiny_text"><div id="mailtoLink"></div></span>
-
-    <br>
-    <br>
-
-      <br>
-
-      <span class="normal_text">If you want to get involved or have feedback:</span>
-      <span class="small_text">
-        <br>
-        <br>
-        <a class="normal_text" href="https://coda-coda.github.io/handshake/ShareEEE/">Share Handshake Easy Email Exchange with others</a>
-        <br>
-        <a class="small_text" href="mailto:get.involved.handshake@gmail.com">Please send an email to
-          get.involved.handshake@gmail.com</a>
-        <br>
-      </span>
-
-    </span>
+  <br>
+  <span class="small_text">
+  <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fcoda-coda.github.io%2Fhandshake%2FEEE%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+  <br>
+  <br>
+  Get in touch:
+  <a class="small_text" href="mailto:get.involved.handshake@gmail.com">get.involved.handshake@gmail.com</a>
+</span>
+       
 </body>
