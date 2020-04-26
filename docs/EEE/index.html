@@ -58,18 +58,36 @@
   <br>
   <br>
 
+  <button class="submit_button" onclick="document.getElementById('individuals').style.display='block';document.getElementById('businesses').style.display='none';"><u>Individuals</u></button>
+  <button class="submit_button" onclick="document.getElementById('individuals').style.display='none';document.getElementById('businesses').style.display='block';"><u>Businesses</u></button>
+  <br>
+  <span id="individuals">
   <span class="normal_text">I make my QR </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate">here</a><span class="normal_text"> and save it on my phone.</span>
   <br>
   <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
   <br>
-  
   <span class="normal_text">We meet. You scan my QR from a safe distance and follow the prompts to send me an email. Now we both have a record of our meeting.</span>
-  <br>
-  <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
-  <br>
-  <span class="normal_text">To contact trace, I search my email for 'handshake'. All my meetings appear, in date order, with contact details.</span>
+    <br>
+    <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
+    <br>
+    <span class="normal_text">To contact trace, I search my email for 'handshake'. All my meetings appear, in date order, with contact details.</span>
+  </span>
   
-  
+  <span id="businesses" style="display:none;">
+    <span class="normal_text">I generate the QR for my business </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate">here</a><span class="normal_text">, entering an existing or newly created business email address. Print and display it.</span>
+    <br>
+    <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
+    <br>
+    
+    <span class="normal_text">A customer enters. They scan the QR and follow the prompts to send my business an email. Now both customer and business have a record of their visit.</span>
+    <br>
+    <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
+    <br>
+    <span class="normal_text">To contact trace, I search my business email for 'handshake'. Records of customer visits appear, in date order, with contact details.</span>
+    </span>
+  </span>
+    
+
   <br>
   <br>
 
