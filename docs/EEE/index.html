@@ -34,23 +34,6 @@
 
 <body>
 
-
-  <script type="text/javascript">
-    function updateQRCode(text) {
-
-      var element = document.getElementById("qrcode");
-
-      var bodyElement = document.body;
-      if (element.lastChild)
-        element.replaceChild(showQRCode(text), element.lastChild);
-      else
-        element.appendChild(showQRCode(text));
-
-    }
-
-    updateQRCode('ERROR');
-  </script>
-
   <br>
   <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
   <br>
@@ -58,8 +41,19 @@
   <br>
   <br>
 
-  <button class="submit_button" onclick="document.getElementById('individuals').style.display='block';document.getElementById('businesses').style.display='none';"><u>Individuals</u></button>
-  <button class="submit_button" onclick="document.getElementById('individuals').style.display='none';document.getElementById('businesses').style.display='block';"><u>Businesses</u></button>
+  <span id="individualbutton" class="secondary_text" onclick="
+  document.getElementById('individuals').style.display='block';
+  document.getElementById('businesses').style.display='none'; 
+  document.getElementById('businessbutton').style.textDecoration='underline';
+  document.getElementById('individualbutton').style.textDecoration='none';">
+  For individuals</span><span class="secondary_text"> | </span>
+  <span id="businessbutton" class="secondary_text" style="text-decoration: underline;" onclick="
+  document.getElementById('individuals').style.display='none';
+  document.getElementById('businesses').style.display='block';
+  document.getElementById('businessbutton').style.textDecoration='none';
+  document.getElementById('individualbutton').style.textDecoration='underline';">
+  For business</span>
+  <br>
   <br>
   <span id="individuals">
   <span class="normal_text">I make my QR </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate">here</a><span class="normal_text"> and save it on my phone.</span>
@@ -74,7 +68,7 @@
   </span>
   
   <span id="businesses" style="display:none;">
-    <span class="normal_text">I generate the QR for my business </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate">here</a><span class="normal_text">, entering an existing or newly created business email address. Print and display it.</span>
+    <span class="normal_text">I generate the QR for my business </span><a class="secondary_text" href="https://coda-coda.github.io/handshake/EEE/generate">here</a><span class="normal_text">, entering an existing or newly created business email address. I print and display it.</span>
     <br>
     <img src="../down_arrow.png" style="margin-top: 5px; width: 80px" alt="Down arrow">
     <br>
