@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta property="og:url" content="https://coda-coda.github.io/handshake/EEE/lock_screen.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Handshake Easy Email Exchange: Make contact tracing easier - Lock screen QR generator" />
+  <meta property="og:description"
+    content="Scan someone’s QR code, then send them the auto-generated email, now you both have a record of the connection." />
+  <meta property="og:image" content="https://coda-coda.github.io/handshake/large_logo_open_graph_eee.png" />
+  <meta property="og:image:secure_url" content="https://coda-coda.github.io/handshake/large_logo_open_graph_eee.png" />
+
+  <link rel="shortcut icon" href="https://coda-coda.github.io/handshake/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="qrcode.js">
+  </script>
+  <script type="text/javascript" src="html5-qrcode.js">
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Handshake: Easy Email Exchange - Generate your QR code
+  </title>
+  <style type="text/css" media="screen">
+    body {
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <script type="text/javascript">
+    function updateQRCode(text) {
+
+      var element = document.getElementById("qrcode");
+
+      var bodyElement = document.body;
+      if (element.lastChild)
+        element.replaceChild(showQRCode(text), element.lastChild);
+      else
+        element.appendChild(showQRCode(text));
+
+    }
+
+    updateQRCode('ERROR');
+  </script>
+  <span id="preSubmitInfo">
+  <br>
+  <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
+  
+  
+  
+  <br>
+  <span class="normal_text" style="font-size: medium;">Easy Email Exchange</span>
+  <br>
+  
+  <form name="QRform" id="QRform" onsubmit="event.preventDefault();
+      mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a <a href=\'https\:\/\/coda-coda.github.io/handshake/EEE/\'>Handshake Easy Email Exchange</a> interaction.';
+      updateQRCode(mailtoLink);
+      document.getElementById('generatedContent').style.visibility = 'visible';
+      document.getElementById('preSubmitInfo').style.visibility = 'hidden';
+      ">
+
+    <table class="center">
+      <tr>
+        <td style="text-align: right;"><span class="normal_text">Your email address:</span> </td>
+        <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
+      </tr>
+    </table>
+    <input class="submit_button" type="submit" value="Click here to generate your own QR code">
+  </form>
+  </span>
+
+  <!-- This is where our QRCode will appear in. -->
+  <span id="generatedContent" style="visibility:hidden">
+    <br>
+    <br>
+    <br>
+    <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
+    <br>
+    <div id="qrcode" style="width: 250px; background-color: white;  margin-left:auto; margin-right:auto;"></div>
+    </span>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
