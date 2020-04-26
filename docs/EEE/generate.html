@@ -57,7 +57,14 @@
   <br>
   
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
-      mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a <a href=\'https\:\/\/coda-coda.github.io/handshake/EEE/\'>Handshake</a> interaction.';
+      name = document.getElementById('name');
+      if (name.value=='') {
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a <a href=\'https\:\/\/coda-coda.github.io/handshake/EEE/\'>Handshake</a> interaction.';
+      }
+      else {
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a <a href=\'https\:\/\/coda-coda.github.io/handshake/EEE/\'>Handshake</a> interaction with the QR code of ' + name.value + '.';
+      }
+
       updateQRCode(mailtoLink);
       document.getElementById('generatedContent').style.visibility = 'visible';
       document.getElementById('preSubmitInfo').style.visibility = 'hidden';
@@ -67,6 +74,10 @@
       <tr>
         <td style="text-align: right;"><span class="normal_text">Your email address:</span> </td>
         <td><input type="text" name="email" id="email" rows="8" cols="50"></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;"><span class="normal_text">Name (optional):</span> </td>
+        <td><input type="text" name="name" id="name" rows="8" cols="50"></td>
       </tr>
     </table>
     <input class="submit_button" type="submit" value="Click here to generate your own QR code">
