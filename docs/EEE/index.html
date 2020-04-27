@@ -30,9 +30,17 @@
   </style>
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+  <script>
+    function checkForBusiness() {
+      var view = window.location.search.replace("?view=", "");
+      if (view=='business') {
+        document.getElementById('businessbutton').click();
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body onload="checkForBusiness();">
 
   <br>
   <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
