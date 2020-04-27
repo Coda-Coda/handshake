@@ -1,3 +1,5 @@
+The info below relates to the original version of Handshake, for the newer simplified alternate version see: https://coda-coda.github.io/handshake/EEE/
+
 ![Image of Handshake - Track your proximity to Covid-19.](docs/title.png)
 
 I've had this idea for a website (or app) that could help, perhaps just a little, to control the spread of Covid-19. I'm calling it Handshake for now.
