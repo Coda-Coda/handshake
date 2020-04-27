@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
 </head>
 
-<body onload="document.getElementById('url').value='https\:\/\/'">
+<body style="background-color: black;" onload="document.getElementById('url').value='https\:\/\/'">
 
 
   <script type="text/javascript">
@@ -57,8 +57,8 @@
   <br>
   
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
-      alert('hi');
-      updateQRCode(document.getElementById('url').value);
+      url = document.getElementById('url').value;
+      updateQRCode(url.value);
       document.getElementById('generatedContent').style.visibility = 'visible';
       ">
 
@@ -68,14 +68,12 @@
         <td><input type="text" name="url" id="url" rows="8" cols="50" required></td>
       </tr>
     </table>
-    <input class="submit_button" type="submit" value="Click here to generate your QR code">
+    <input class="submit_button" style="background-color: black; color:white" type="submit" value="Click here to generate your QR code">
   </form>
   </span>
 
   <!-- This is where our QRCode will appear in. -->
   <span id="generatedContent" style="visibility:hidden">
-    <br>
-    <span class="heading_hand" style="font-size:xx-large;">Hand</span><span style="font-size:xx-large;" class="heading_shake">shake</span>
     <br>
     <div id="qrcode" style="width: 250px; background-color: white;  margin-left:auto; margin-right:auto;"></div>
   </span>
