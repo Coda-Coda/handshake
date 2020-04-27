@@ -33,7 +33,7 @@
   <script>
     function checkForBusiness() {
       var view = window.location.search.replace("?view=", "");
-      if (view=='business') {
+      if (view.includes('business')) {
         document.getElementById('businessbutton').click();
       }
     }
