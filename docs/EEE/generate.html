@@ -59,10 +59,10 @@
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       name = document.getElementById('name');
       if (name.value=='') {
-        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction. https\:\/\/coda-coda.github.io/handshake/EEE/';
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction. tinyurl.com/covidhandshake';
       }
       else {
-        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction using the QR code of ' + name.value + '. https\:\/\/coda-coda.github.io/handshake/EEE/';
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction using the QR code of ' + name.value + '. tinyurl.com/covidhandshake';
       }
 
       updateQRCode(mailtoLink);
