@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>QR Scanner Demo</title>
 </head>
-<body>
+<body onload="openedLinkYet=false">
 <style>
     canvas {
         display: none;
@@ -64,8 +64,10 @@
         label.style.color = 'teal';
         clearTimeout(label.highlightTimeout);
         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-        window.location.href=result;
-        alert(result);
+        if (openedLinkYet==false) {
+            openedLinkYet=true;
+            window.location.href=result;
+        }
     }
 
     // ####### Web Cam Scanning #######
