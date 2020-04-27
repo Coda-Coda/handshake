@@ -59,15 +59,15 @@
     const fileQrResult = document.getElementById('file-qr-result');
 
     function setResult(label, result) {
+        if (openedLinkYet==false) {
+            openedLinkYet=true;
+            window.location.href=result;
+        }
         label.textContent = result;
         camQrResultTimestamp.textContent = new Date().toString();
         label.style.color = 'teal';
         clearTimeout(label.highlightTimeout);
         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-        if (openedLinkYet==false) {
-            openedLinkYet=true;
-            window.location.href=result;
-        }
     }
 
     // ####### Web Cam Scanning #######
