@@ -1,26 +1,4 @@
-This example shows how you can create a QR Code PNG using Javascript and HTML5.
+![Image of Handshake - Make contact tracing easier.](docs/large_logo_open_graph2.png)
 
-Notes:
----
-This is the heart of my Tab Transmit Safari Extension.
-
-You can downloaded it from:
-http://ticklespace.com/tab-transmit-safari-extension
-or
-https://extensions.apple.com/ 
-Tab Transmit is listed under Productivity.
-
-
-Author: 
----
-Amanuel Tewolde / TickleSpace - www.ticklespace.com
-
-Copyright (c) 2011 Amanuel Tewolde
-
-License: 
----
-MIT
-
-Other Projects:
----
-QRCode.js Copyright (c) 2009 Kazuhiko Arase
+This is a simple tool that helps make it easy to send a quick email to the person or business you meet so that you both have a record of meeting (in your own email accounts).
+You're just sending an email to the person you meet, no data is centrally stored by Handshake at all when you use this approach.
