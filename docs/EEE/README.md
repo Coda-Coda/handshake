@@ -6,4 +6,8 @@ You're just sending an email to the person you meet, no data is centrally stored
 
 If you want to be absolutely sure, don't use the Handshake website, but instead you can edit the mailto link below, then use a trustworthy QR code generator and show your QR code only to people you'd trust with your email address (or even create a special email address for this - though make sure you set up email forwarding or check it regularly in the unlikely but important event that one of your Handshake contacts needs to contact you about Covid-19).
 
+```
 mailto:YOUR EMAIL?subject=Handshake Record&body=This is a record of a Handshake interaction using the QR code of YOUR NAME.
+```
+
+The Handshake website simply generates a QR code with similar contents to the mailto link above (plus a link back to tinyurl.com/covidhandshake).
