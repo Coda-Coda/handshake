@@ -59,10 +59,10 @@
   <form name="QRform" id="QRform" onsubmit="event.preventDefault();
       name = document.getElementById('name');
       if (name.value=='') {
-        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction. tinyurl.com/covidhandshake';
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction. tinyurl.com/covidhandshake (Keywords: contact tracing, coronavirus, covid19, covid-19).';
       }
       else {
-        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction using the QR code of ' + name.value + '. tinyurl.com/covidhandshake';
+        mailtoLink = 'mailto:' + document.getElementById('email').value + '?subject=Handshake Record&body=This is a record of a Handshake interaction using the QR code of ' + name.value + '. tinyurl.com/covidhandshake (Keywords: contact tracing, coronavirus, covid19, covid-19).';
       }
 
       updateQRCode(mailtoLink);
